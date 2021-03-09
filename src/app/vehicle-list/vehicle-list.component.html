@@ -1,0 +1,28 @@
+<body>
+    <h2>vehicle list</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+            <th>VehicleId</th>
+            <th>RegNo</th>
+            <th>CustomerName</th>
+            <th>Address</th>
+            <th>Status</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let vehicle of vehicles">
+                <td>{{vehicle.vehicleId}}</td>
+                <td>{{vehicle.regNo}}</td>
+                <td>{{vehicle.customerName}}</td>
+                <td>{{vehicle.Address}}</td>
+                <td>{{vehicle.status}}</td>
+                <!-- <td>
+                    <button (click)="updateEmployee(employee.id)" class="btn btn-info">Upadte</button>
+                    <button (click)="deleteEmployee(employee.id)" class="btn btn-danger" style="margin-left:10px">Delete</button>
+                    <button (click)="employeeDetails(employee.id)" class="btn btn-info" style="margin-left: 10px">View</button>
+                </td> -->
+            </tr>
+        </tbody>
+    </table>
+    </body>
