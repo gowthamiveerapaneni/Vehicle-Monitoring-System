@@ -1,28 +1,71 @@
-<body>
-    <h2>vehicle list</h2>
-    <table class="table table-striped">
-        <thead>
-            <tr>
-            <th>VehicleId</th>
-            <th>RegNo</th>
-            <th>CustomerName</th>
-            <th>Address</th>
-            <th>Status</th>
-        </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let vehicle of vehicles">
-                <td>{{vehicle.vehicleId}}</td>
-                <td>{{vehicle.regNo}}</td>
-                <td>{{vehicle.customerName}}</td>
-                <td>{{vehicle.Address}}</td>
-                <td>{{vehicle.status}}</td>
-                <!-- <td>
+<form name="regionForm" novalidate>
+    <div class="panel-heading">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h2>vehicle list</h2>
+                <div class="row">
+                    <div class='col-sm-5'>
+                        <div class="form-group">
+                            <label for="customerName">Customers:</label>
+                            <span style="margin-left:10px; width: 50%; padding: 5px;">
+                                <select (change)="onCustomerChange($event)"  >
+                                    <option *ngFor='let item of customers' [value]="item">
+                                        {{item}}
+                                    </option>
+                                </select>
+                            </span>
+                        </div>
+                    </div>
+                    <div class='col-sm-5'>
+                        <div class="form-group">
+                            <label for="status">Status :</label>
+                            <span style="margin-left:10px; width: 50%; padding: 5px;">
+                                <select (change)="onStatusChange($event)">
+                                    <option *ngFor='let item of status' [value]="item">
+                                        {{item}}
+                                    </option>
+                                </select>
+                            </span>
+                        </div>
+                    </div>
+                    <div class='col-sm-2'>
+                        <div align="right">
+                            <button id="submit" class="btn btn-primary" ng-click="filterSearch()"
+                                type="button">Search</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel-footer">
+        <div class="panel-body">
+           
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>VehicleId</th>
+                        <th>RegNo</th>
+                        <th>CustomerName</th>
+                        <th>Address</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let vehicle of filteredVehicles">
+                        <td>{{vehicle.vehicleId}}</td>
+                        <td>{{vehicle.regNo}}</td>
+                        <td>{{vehicle.customerName}}</td>
+                        <td>{{vehicle.address}}</td>
+                        <td>{{vehicle.status}}</td>
+                        <!-- <td>
                     <button (click)="updateEmployee(employee.id)" class="btn btn-info">Upadte</button>
                     <button (click)="deleteEmployee(employee.id)" class="btn btn-danger" style="margin-left:10px">Delete</button>
                     <button (click)="employeeDetails(employee.id)" class="btn btn-info" style="margin-left: 10px">View</button>
                 </td> -->
-            </tr>
-        </tbody>
-    </table>
-    </body>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</form>

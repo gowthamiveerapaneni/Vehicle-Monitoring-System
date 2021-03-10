@@ -3,7 +3,7 @@ export class Vehicle {
     vehicleId :string;
     regNo :string;
     customerName :string;
-    Address :string;
-    Status :string;
+    address :string;
+    status :string;
   
 }
