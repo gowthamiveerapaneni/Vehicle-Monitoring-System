@@ -28,12 +28,7 @@
                             </span>
                         </div>
                     </div>
-                    <div class='col-sm-2'>
-                        <div align="right">
-                            <button id="submit" class="btn btn-primary" ng-click="filterSearch()"
-                                type="button">Search</button>
-                        </div>
-                    </div>
+                   
                 </div>
             </div>
         </div>
@@ -44,19 +39,21 @@
             <table class="table table-striped">
                 <thead>
                     <tr>
+                        <th>Id</th>
                         <th>VehicleId</th>
                         <th>RegNo</th>
                         <th>CustomerName</th>
-                        <th>Address</th>
+                        <!-- <th>Address</th> -->
                         <th>Status</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr *ngFor="let vehicle of filteredVehicles">
+                        <td>{{vehicle.id}}</td>
                         <td>{{vehicle.vehicleId}}</td>
                         <td>{{vehicle.regNo}}</td>
                         <td>{{vehicle.customerName}}</td>
-                        <td>{{vehicle.address}}</td>
+                        <!-- <td>{{vehicle.address}}</td> -->
                         <td>{{vehicle.status}}</td>
                         <!-- <td>
                     <button (click)="updateEmployee(employee.id)" class="btn btn-info">Upadte</button>

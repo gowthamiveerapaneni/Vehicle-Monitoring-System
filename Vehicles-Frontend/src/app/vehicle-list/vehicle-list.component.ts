@@ -30,40 +30,18 @@ export class VehicleListComponent implements OnInit {
   }
   private getVehicles(){
     this.vehicleService.getVehicleList().subscribe((data :any) =>{
-      const res = [...data, {
-        address: 'test 1',
-        customerName: "Ericsson AB",
-        id: 3,
-        regNo: "DEF456",
-        status: "Not Available",
-        vehicleId: "VLUR4X20009093588"
-      }, 
-      {
-        address: 'test 1',
-        customerName: "Ericsson AB",
-        id: 4,
-        regNo: "DEF456",
-        status: "Not Available",
-        vehicleId: "VLUR4X20009093588"
-      }]
+      const res = [...data]
       console.log(res)
       this.allVehicles=res;
       this.filteredVehicles=res;
         this.status = [NOT_SELECTED, ...new Set(res.map(r => r.status))]
       this.customers = [NOT_SELECTED, ...new Set(res.map(r => r.customerName))]
   })}
-  // private filterSearch(){
-  //   this.vehicles=this.vehicles.filter(res =>{
-
-  //   })
-  //   }
+  
 
 
   filterSearch () {
-    // if ((this.CustomerSelected === NOT_SELECTED) && (this.StatusSelected === NOT_SELECTED)) {
-    //   this.filteredVehicles = this.allVehicles
-    //   return
-    // }
+   
     this.filteredVehicles = this.allVehicles.filter((vehicle: Vehicle) => {
       let res = false
       if (this.CustomerSelected && this.StatusSelected) {
