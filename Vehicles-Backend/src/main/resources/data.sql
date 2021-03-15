@@ -1,8 +1,14 @@
+insert into user values (1,'Cementvagen 8, 111 11 Sodertalje','Kalles Grustransport AB')
+insert into user values (2,'Balkvagen 12, 222 22 Stockholm','Johans Bulk AB')
+insert into user values (3,'Bugentvagen 1, 333 33 Uppsala','Haralds Vardetransporter AB')
 
-insert into vehicle values (1,'Cementvagen 8, 111 11 Sodertalje','Connected','Kalles Grustransport AB','ABC123','YS2R4X20005399401');
-insert into vehicle values (2,'Cementvagen 8, 111 11 Sodertalje','Disconnected','Kalles Grustransport AB','DEF456','VLUR4X20009093588');
-insert into vehicle values (3,'Cementvagen 8, 111 11 Sodertalje','Connected','Kalles Grustransport AB','GHI789','VLUR4X2000909080066');
-insert into vehicle values (4,'Balkvagen 12, 222 22 Stockholm','Connected','Johans Bulk AB','kl0012','YS2R4X20005388011');
-insert into vehicle values (5,'Balkvagen 12, 222 22 Stockholm','Connected','Johans Bulk AB','MN0345','YS2R4X20005387949');
-insert into vehicle values (6,'Bugentvagen 1, 333 33 Uppsala','Disconnected','Haralds Vardetransporter AB','PQR8','YS2R4X20005387765');
-insert into vehicle values (7,'Bugentvagen 1, 333 33 Uppsala','Connected','Haralds Vardetransporter AB','STU901','YS2R4X20005387055');
+
+
+insert into vehicle values (101,'ABC123','','YS2R4X20005399401',1)
+insert into vehicle values (103,'GHI789','','VLUR4X2000909080066',1)
+insert into vehicle values (104,'kl0012','','YS2R4X20005388011',2)
+insert into vehicle values (102,'DEF456','','VLUR4X20009093588',1)
+insert into vehicle values (105,'MN0345','','YS2R4X20005387949',2)
+insert into vehicle values (106,'PQR8','','YS2R4X20005387765',3)
+insert into vehicle values (107,'STU901','','YS2R4X20005387055',3)
+

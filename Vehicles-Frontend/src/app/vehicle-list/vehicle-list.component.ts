@@ -59,10 +59,3 @@ export class VehicleListComponent implements OnInit {
     this.CustomerSelected = event.target.value
     this.filterSearch()
   }
-
-  onStatusChange(event) {
-    this.StatusSelected = event.target.value
-    this.filterSearch()
-  }
-
-}
