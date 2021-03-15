@@ -6,7 +6,7 @@ import { Vehicle } from './vehicle';
   providedIn: 'root'
 })
 export class VehicleService {
-  private baseURL = "http://localhost:8080/api/v1/vehicles";
+  private baseURL = "http://localhost:8080/api/v1/vehicle";
   constructor(private httpClient: HttpClient) { }
 
   getVehicleList(): Observable<Vehicle[]> {
