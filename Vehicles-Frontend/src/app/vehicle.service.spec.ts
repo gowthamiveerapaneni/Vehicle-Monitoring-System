@@ -4,7 +4,7 @@ import { VehicleService } from './vehicle.service';
 
 describe('VehicleService Component:', () => {
 
-  beforeforEach(async () => {
+  beforeEach(async () => {
     TestBed.configureTestingModule({
 		declarations: [VehicleService],
 		imports: [
