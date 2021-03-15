@@ -23,7 +23,7 @@ export class AppComponent {
   
       setInterval(() => {
         this.getVehicles()
-      }, 2000)
+      }, 3600)
   
     }
   
